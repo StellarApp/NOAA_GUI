@@ -1,0 +1,51 @@
+{
+  "version": "0.0.1",
+  "description": "NOAA import/download data",
+  "main": "",
+  "scripts": {
+    "webpack": "./node_modules/.bin/webpack --watch",
+    "test": "DATABASE_URL=postgres://postgres@localhost/noaa_db ",
+    "test:watch": "",
+    "start:dev": "npm run webpack & nodemon backend/server.js --ignore frontend/ ",
+    "start": "node backend/server.js",
+    "postinstall": "npm run webpack"
+  },
+  "engines": {
+    "node": "10.16.x"
+  },
+  "babel": {
+    "presets": [
+      "@babel/react"
+    ]
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-react": "^7.6.3",
+    "babel": "^6.23.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-styled-components": "^1.10.6",
+    "nodemon": "^1.19.4",
+    "prettier": "^1.18.2",
+    "redux-logger": "^3.0.6",
+    "webpack": "^4.41.1",
+    "webpack-cli": "^3.3.9"
+  },
+  "dependencies": {
+    "@google/maps": "^1.0.2",
+    "axios": "^0.19.0",
+    "bcrypt": "^3.0.6",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "html-webpack-plugin": "^3.2.0",
+    "pg": "^7.12.1",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "react-redux": "^7.1.1",
+    "react-router-dom": "^5.1.2",
+    "redux": "^4.0.4",
+    "redux-thunk": "^2.3.0",
+    "sequelize": "^5.19.6"
+  }
+}
